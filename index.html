@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home · Agentic AI Frontier Seminar</title>
+  <meta name="description" content="Agentic AI Frontier Seminar — frontier research and practice on agentic AI." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="title">Agentic AI Frontier Seminar</div>
+          <div class="subtitle">Frontiers of Agentic AI — research, systems, and practice</div>
+        </div>
+      </div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" />
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">☰</label>
+
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="upcoming.html" class="nav-link">Upcoming</a>
+        <a href="past.html" class="nav-link">Past</a>
+        <a href="about.html" class="nav-link">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="panel hero">
+      <div class="hero-text">
+        <span class="badge">Online · Pacific Time (PT)</span>
+        <h2>Agentic AI Frontier Seminar</h2>
+        <p class="lead">
+          A seminar series on <strong>Agentic AI</strong>: models × tools × memory × multi-agent systems × online learning and safety.
+          We feature speakers from academia and industry to share cutting-edge research and real-world deployments. (If we receive the speaker's permission, we will release the recording videos on the <a href="https://www.youtube.com/@ai-agent-research/featured">AI Agent YouTube Channel</a>)
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="upcoming.html">View Upcoming</a>
+          <a class="btn" href="about.html">About the Seminar</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="muted">Next event</div>
+        <div class="hero-title">Talk Title: TBA</div>
+        <div class="muted">Associate Professor · Baosen Zhang · University of Washington</div>
+        <div class="muted">Time: 2025-09-12 · 08:00–09:00 PT · Online</div>
+        <div class="card-actions">
+          <a class="btn" href="upcoming.html">Details</a>
+          <a class="btn" href="#" aria-disabled="true">Join link (TBA)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Seminar (above Focus Areas) -->
+    <section class="panel">
+      <h2 style="margin-top:0">Current Seminar</h2>
+      <div class="grid cols-2">
+        <article class="card">
+          <div class="badge">Happening Soon</div>
+          <h3>Talk Title: TBA</h3>
+          <div class="muted">Speaker: Associate Professor · Furong Huang · University of Maryland</div>
+          <p>
+            Talk Abstract: TBA.
+          </p>
+          <div class="card-actions">
+            <a class="btn" href="#" aria-disabled="true">Join (TBA)</a>
+            <a class="btn" href="upcoming.html">More details</a>
+          </div>
+        </article>
+        <article class="card">
+          <h4 style="margin:.2em 0">Logistics</h4>
+          <ul>
+            <li>Date &amp; Time: 2025-09-5 · 09:00–10:00 PT</li>
+            <li>Format: Online</li>
+            <li>Host: Agentic AI Frontier Seminar</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 style="margin-top:0">Focus Areas</h2>
+      <div class="grid cols-2">
+        <article class="card">
+          <h3>Foundation Models &amp; Core Capabilities</h3>
+          <!-- <ul>
+            <li>Large Language Models (LLMs) and Multimodal Foundation Models</li>
+            <li>Instruction Tuning, RLHF, and Fine-Tuning for Agency</li>
+            <li>Tool-Use and Code Generation with LLMs</li>
+            <li>Planning, Memory, and Reasoning Modules</li>
+            <li>Simulation and World Modeling for Agent Cognition</li>
+          </ul> -->
+        </article>
+        <article class="card">
+          <h3>Agent Infrastructure &amp; Tooling</h3>
+          <!-- <ul>
+            <li>Agent Frameworks (e.g., LangChain, AutoGPT, OpenAgents)</li>
+            <li>Orchestration Engines and Workflow Automation</li>
+            <li>Memory Systems (episodic, long-term)</li>
+            <li>Tool Integration APIs (e.g., browsing, search, databases)</li>
+            <li>Multi-agent Simulators and Sandboxes</li>
+            <li>Observability, Logging, and Debugging Tools for Agents</li>
+          </ul> -->
+        </article>
+        <article class="card">
+          <h3>Learning, Adaptation &amp; Feedback</h3>
+          <!-- <ul>
+            <li>Online and Continual Learning for Agents</li>
+            <li>Self-Improvement and Autocurricular Learning</li>
+            <li>Goal Discovery and Task Generation</li>
+            <li>Human-in-the-Loop Fine-Tuning and Correction</li>
+            <li>Feedback Loops and Preference Learning</li>
+          </ul> -->
+        </article>
+        <article class="card">
+          <h3>Multi-Agent Systems &amp; Social Intelligence</h3>
+          <!-- <ul>
+            <li>Multi-Agent Collaboration and Communication</li>
+            <li>Emergent Coordination and Negotiation</li>
+            <li>Agent Societies and Organizational Structures</li>
+            <li>Trust, Reputation, and Alignment in Multi-Agent Environments</li>
+            <li>Social Simulation and Modeling with Agents</li>
+          </ul> -->
+        </article>
+        <article class="card">
+          <h3>Evaluation, Safety &amp; Alignment</h3>
+          <!-- <ul>
+            <li>Benchmarks and Standardized Agentic Tasks</li>
+            <li>Behavioral Testing and Red-Teaming</li>
+            <li>Adversarial Prompting and Jailbreak Robustness</li>
+            <li>Value Alignment, Intent Interpretation, and Guardrails</li>
+            <li>Human Oversight, Verification, and Interpretability</li>
+            <li>Evaluation of Long-Horizon and Open-Ended Behavior</li>
+          </ul> -->
+        </article>
+        <article class="card">
+          <h3>Applications &amp; Vertical Use Cases</h3>
+          <!-- <ul>
+            <li>Scientific Discovery (e.g., literature review, hypothesis testing)</li>
+            <li>Software Engineering and Autonomous Coding Agents</li>
+            <li>Education (e.g., tutoring, curriculum generation)</li>
+            <li>Healthcare Agents (e.g., diagnosis, workflow assistance)</li>
+            <li>Legal, Financial, and Compliance Agents</li>
+            <li>Enterprise Automation and Knowledge Work</li>
+          </ul> -->
+        </article>
+        <article class="card">
+          <h3>Interface &amp; Interaction Design</h3>
+          <!-- <ul>
+            <li>Natural Language Interfaces for Agent Control</li>
+            <li>Multi-modal Interfaces (voice, vision, gesture)</li>
+            <li>UX for Agentic Systems (agency vs. control)</li>
+            <li>Transparency and Explainability in Interactions</li>
+            <li>Trustworthy and Predictable Agent Behavior</li>
+          </ul> -->
+        </article>
+        <article class="card">
+          <h3>Governance, Ethics &amp; Ecosystem Building</h3>
+          <!-- <ul>
+            <li>Open Standards for Agentic Interoperability (e.g., Agent Protocols)</li>
+            <li>Data Governance, Privacy, and Consent</li>
+            <li>Policy and Regulatory Frameworks for Agentic AI</li>
+            <li>AI Agents and the Future of Work</li>
+            <li>Open Source Ecosystems and Community-Building</li>
+            <li>Agentic Web and Decentralized Agent Platforms</li>
+          </ul> -->
+        </article>
+      </div>
+    </section>
+
+    <!-- Organizers (below Focus Areas) -->
+    <section class="panel">
+      <h2 style="margin-top:0">Organizing Committee</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <h3>Shangding Gu</h3>
+          <div class="muted">UC Berkeley</div>
+          <p>He is a postdoctoral researcher in the Department of EECS at UC Berkeley. He works on AI safety, reinforcement learning, and robot learning.</p>
+          <div class="card-actions">
+            <a class="btn" href="mailto:shangding.gu@berkeley.edu">Email</a>
+            <a class="btn" href="https://people.eecs.berkeley.edu/~shangding.gu/index.html" aria-disabled="true">Website</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Ming Jin</h3>
+          <div class="muted">Virginia Tech</div>
+          <p>He is an assistant professor in the Bradley Department of Electrical and Computer Engineering at Virginia Tech. He works on trustworthy AI, safe reinforcement learning, foundation models, with applications for cybersecurity, power systems, recommender systems, and CPS..</p>
+          <div class="card-actions">
+            <a class="btn" href="mailto:jinming@vt.edu">Email</a>
+            <a class="btn" href="https://www.jinming.tech/" aria-disabled="true">Website</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Yali Du</h3>
+          <div class="muted">KCL</div>
+          <p>She is an associate professor in AI at King’s College London. She works on reinforcement learning and multi-agent cooperation, with topics such as generalization, zero-shot coordination, evaluation of human and AI players, and social agency (e.g., human-involved learning, safety, and ethics).</p>
+          <div class="card-actions">
+            <a class="btn" href="mailto:yali.du@kcl.ac.uk">Email</a>
+            <a class="btn" href="https://yalidu.github.io/" aria-disabled="true">Website</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year">2025</span> Agentic AI Frontier Seminar · Contact: <a href="mailto:shangding.gu@berkeley.edu, jinming@vt.edu">shangding.gu@berkeley.edu, jinming@vt.edu</a>
+  </footer>
+</body>
+</html>
