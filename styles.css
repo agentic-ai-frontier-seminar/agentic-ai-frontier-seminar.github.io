@@ -36,12 +36,27 @@ a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:24px}
 
 /* Header & nav */
-.site-header{
+/* .site-header{
   position:sticky; top:0; z-index:50;
   backdrop-filter:saturate(140%) blur(10px);
   background:linear-gradient(180deg, rgba(10,15,30,.7), rgba(10,15,30,.35) 70%, transparent);
   border-bottom:1px solid var(--border);
+} */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: saturate(140%) blur(10px);
+  background: linear-gradient(
+    180deg,
+    rgba(40, 45, 60, 0.3),
+    rgba(40, 45, 60, 0.1) 70%,
+    transparent
+  );
+  border-bottom: 1px solid var(--border);
 }
+
 .header-inner{display:flex;align-items:center;gap:18px}
 .brand{display:flex;align-items:center;gap:12px}
 .logo{width:42px;height:42px;border-radius:12px;background:conic-gradient(from 210deg, var(--accent), var(--accent-2));box-shadow:0 6px 20px rgba(122,162,255,.35)}
