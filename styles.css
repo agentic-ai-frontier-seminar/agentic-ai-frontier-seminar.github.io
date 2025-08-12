@@ -118,3 +118,23 @@ tbody tr:hover{background:rgba(122,162,255,.06)}
 
 .card ul{margin:.4em 0 0 1.1em; padding-left:.6em; list-style:disc}
 .card li{margin:.25em 0}
+
+
+/* Organizer headshots */
+.headshot{
+  width:112px; height:152px;
+  border-radius:5%;
+  object-fit:cover;
+  display:block;
+  margin:0 0 10px 0;
+  border:1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(255,255,255,.04), transparent);
+}
+
+/* 更紧凑的移动端布局可让头像与文字并排 */
+@media (max-width:680px){
+  .card .headshot{
+    width:88px; height:88px; margin:0 12px 8px 0; float:left;
+  }
+}
