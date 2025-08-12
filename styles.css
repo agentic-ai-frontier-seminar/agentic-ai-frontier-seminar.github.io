@@ -122,7 +122,7 @@ tbody tr:hover{background:rgba(122,162,255,.06)}
 
 /* Organizer headshots */
 .headshot{
-  width:112px; height:152px;
+  width:112px; height:160px;
   border-radius:5%;
   object-fit:cover;
   display:block;
