@@ -138,3 +138,24 @@ tbody tr:hover{background:rgba(122,162,255,.06)}
     width:88px; height:88px; margin:0 12px 8px 0; float:left;
   }
 }
+
+/* Incoming Seminar: justify body text */
+.panel.incoming .card p{
+  text-align: justify;
+  text-justify: inter-word;   /* 英文按词分配空白 */
+  text-align-last: left;      /* 最后一行保持左对齐，避免拉伸 */
+  -moz-text-align-last: left;
+  hyphens: auto;              /* 自动断词，减少大空隙 */
+  -webkit-hyphens: auto;
+}
+
+/* 可选：如果“Speaker”这一行也要两端对齐，解除注释 */
+// .panel.incoming .muted{ text-align: justify; text-justify: inter-word; text-align-last: left; }
+
+.hero.hero--single{
+  grid-template-columns: 1fr;
+}
+.hero.hero--single .hero-text{
+  max-width: 900px;
+}
+
