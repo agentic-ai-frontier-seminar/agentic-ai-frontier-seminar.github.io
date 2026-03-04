@@ -66,14 +66,16 @@
 
   <h2 style="margin-top:0">Incoming Seminar</h2>
   <article class="card">
-    <div class="badge">Online · 2026-02-27 · 09:00–10:00 PT</div>
-    <h3>Talk Title: Rethinking Post Training</h3>
-    <div class="muted">Associate Professor · Pulkit Agrawal · MIT</div>
+    <div class="badge">Online · 2026-03-06 · 09:00–10:00 PT</div>
+    <h3>Talk Title: Goodhart’s Revenge: Reward Hacking in RL-Tuned LLMs, and How We Fight Back</h3>
+    <div class="muted">Assistant Professor · Lifu Huang · UC Davis</div>
     
     <p>
-      Talk Abstract: In this talk, I will discuss the limitations of current post-training methods and discuss recent advances in continual learning that holistically study: (i) What data should the agent learn from? (ii) What is the right learning algorithm? (iii) and finally questioning the pre-training / finetuning paradigm. This talk will span our papers RL Razor, Self-Distillation Learning, SEAL, and more recent work. 
+      Talk Abstract: Reinforcement learning, such as RLHF and RLVR, has become a dominant post-training paradigm for large language models. Yet both methods are fundamentally proxy optimization: they optimize reward signals that only approximate true user intent. Under strong optimization pressure, this gap can produce reward hacking, behaviors that score highly on the proxy while undermining truthfulness or robustness, including sycophancy, length bias, code gaming, and so on.
+
+This talk presents three complementary defenses from the PLUM Lab: (1) SMART mitigates sycophancy by training models on uncertainty-aware adaptive reasoning trajectories with dense progress rewards, distilling high-quality reasoning patterns and behaviors into the policy. (2) IR³ performs post-tuning objective forensics by reconstructing the implicit reward, decomposing it into interpretable feature contributions, and surgically repairing hacking-related components. (3) ARA brings robustness into the RLHF loop through adversarial reward auditing: a Hacker–Auditor game actively surfaces exploits, and auditor-gated rewards make exploitative behaviors unprofitable during training. I conclude with open problems and a roadmap toward reward-hacking-resistant alignment.
     <p>
-  Bio: Pulkit Agrawal is an Associate Professor in the Department of Electrical Engineering and Computer Science at MIT. He earned his Ph.D. from UC Berkeley and co-founded SafelyYou Inc. Pulkit completed his bachelor’s from IIT Kanpur and was awarded the Director’s Gold Medal. His work has received multiple Best Paper Awards, the IEEE Early Career Award in Robotics and Automation, the IROS Toshio Fukuda Young Professional Award, the IIT Kanpur Young Alumnus Award, the Sony Faculty Research Award, the Salesforce Research Award, the Amazon Research Award, the Signatures Fellow Award, the Fulbright Science and Technology Award, and others. 
+  Bio: Lifu Huang is an Assistant Professor of Computer Science at UC Davis. He received his Ph.D. in Computer Science from the University of Illinois Urbana-Champaign in 2020 and was an Assistant Professor at Virginia Tech from 2021 to 2024. His research spans natural language processing and  multimodal learning, with an emphasis on the fundamentals and applications of large language and multimodal foundation models. His work has been recognized with an NSF CAREER Award (2023), an Outstanding Paper Award (ACL 2023), a Best Paper Award Honorable Mention (SIGIR 2023), and a Best Paper Award (AI4Research Workshop, AAAI 2025).
     </p>
     <div class="card-actions">
       <a class="btn" href="https://virginiatech.zoom.us/j/87872134251?pwd=d8ycf9bbWVBK87EbII7nQPIy5YX0Qf.1" aria-disabled="true">Join Link</a>
