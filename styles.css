@@ -120,22 +120,43 @@ tbody tr:hover{background:rgba(122,162,255,.06)}
 .card li{margin:.25em 0}
 
 
-/* Organizer headshots */
+/* Organizers: 2 columns; a lone last card is centered at the SAME width */
+.organizers{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+.organizers > .card:last-child:nth-child(odd){
+  grid-column:1 / -1;          /* span both columns so it can center */
+  justify-self:center;
+  width:calc(50% - 8px);       /* but keep exactly one-column width (gap/2 = 8px) */
+}
+@media (max-width:930px){
+  .organizers{ grid-template-columns:1fr; }
+  .organizers > .card:last-child:nth-child(odd){
+    grid-column:auto; width:auto;
+  }
+}
+
+/* Organizer headshots: float left so name + bio wrap beside the photo */
 .headshot{
   width:112px; height:160px;
   border-radius:5%;
   object-fit:cover;
   display:block;
-  margin:0 0 10px 0;
+  float:left;
+  margin:0 16px 8px 0;
   border:1px solid var(--border);
   box-shadow: var(--shadow);
   background: linear-gradient(180deg, rgba(255,255,255,.04), transparent);
 }
+/* keep the buttons on their own line below the wrapped text */
+.organizers .card-actions{ clear:both; }
 
-/* 更紧凑的移动端布局可让头像与文字并排 */
+/* 更紧凑的移动端头像 */
 @media (max-width:680px){
   .card .headshot{
-    width:88px; height:88px; margin:0 12px 8px 0; float:left;
+    width:88px; height:88px; margin:0 12px 8px 0;
   }
 }
 
