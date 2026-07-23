@@ -29,7 +29,10 @@ body{
     radial-gradient(1000px 500px at 110% -20%, rgba(0,209,178,.08), transparent 60%),
     var(--bg);
   color:var(--text);
-  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,"Inter","SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font:16px/1.65 "Inter",system-ui,-apple-system,Segoe UI,Roboto,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
 }
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -171,12 +174,127 @@ tbody tr:hover{background:rgba(122,162,255,.06)}
 }
 
 /* 可选：如果“Speaker”这一行也要两端对齐，解除注释 */
-// .panel.incoming .muted{ text-align: justify; text-justify: inter-word; text-align-last: left; }
+/* .panel.incoming .muted{ text-align: justify; text-justify: inter-word; text-align-last: left; } */
 
 .hero.hero--single{
   grid-template-columns: 1fr;
 }
 .hero.hero--single .hero-text{
   max-width: 900px;
+}
+
+/* =====================================================================
+   Visual polish pass — typography, micro-interactions, accents
+   ===================================================================== */
+
+/* Display font for headings & brand */
+h1,h2,h3,.brand .title{
+  font-family:"Space Grotesk","Inter",system-ui,sans-serif;
+  letter-spacing:-.01em;
+  line-height:1.2;
+}
+h1{font-size:clamp(26px,4vw,38px)}
+
+/* Section-title accent underline */
+.panel > h1,
+.panel > h2{
+  position:relative;
+  padding-bottom:.4em;
+  margin-bottom:.7em;
+}
+.panel > h1::after,
+.panel > h2::after{
+  content:"";
+  position:absolute; left:0; bottom:0;
+  width:48px; height:3px; border-radius:999px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+}
+
+/* Smooth motion across interactive elements */
+.card,.btn,.nav-link,.table-card td a,tbody tr{
+  transition:transform .18s ease, box-shadow .18s ease,
+             border-color .18s ease, background .18s ease, filter .18s ease;
+}
+
+/* Lift content cards on hover (not the table container) */
+.grid > .card:hover,
+.organizers > .card:hover{
+  transform:translateY(-3px);
+  border-color:var(--ring);
+  box-shadow:0 18px 42px rgba(0,0,0,.30);
+}
+
+/* Buttons */
+.btn:hover{transform:translateY(-1px); border-color:var(--ring)}
+.btn.primary:hover{box-shadow:0 16px 36px rgba(51,91,255,.45)}
+
+/* Nav links */
+.nav-link:hover{transform:translateY(-1px); border-color:var(--ring); text-decoration:none}
+
+/* Badges → status pills with a leading dot */
+.badge{
+  background:rgba(122,162,255,.10);
+  color:var(--text);
+  font-weight:500;
+}
+.badge::before{
+  content:"";
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent-2);
+  box-shadow:0 0 0 3px rgba(0,209,178,.16);
+  flex:0 0 auto;
+}
+
+/* Upcoming: give empty "TBA" cards a bit more presence */
+.grid .card h3{margin:.5em 0 .35em; font-size:1.08rem}
+.grid .card .muted{font-size:.95rem}
+
+/* Tables */
+thead th{
+  font-family:"Space Grotesk","Inter",sans-serif;
+  font-size:.78rem; text-transform:uppercase; letter-spacing:.05em;
+  color:var(--muted); border-bottom:2px solid var(--border);
+}
+tbody tr:nth-child(odd){background:rgba(122,162,255,.035)}
+tbody tr:hover{background:rgba(122,162,255,.10)}
+td strong{font-weight:600}
+
+/* Responsive table: horizontal scroll on small screens */
+.table-card{overflow-x:auto; -webkit-overflow-scrolling:touch}
+.table-card table{min-width:660px}
+
+/* "Video" links styled as compact play buttons */
+.table-card td a{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:6px 12px; border:1px solid var(--border); border-radius:10px;
+  background:var(--panel); color:var(--text); font-size:.9rem; font-weight:500;
+}
+.table-card td a::before{content:"▶"; font-size:.66em; color:var(--accent)}
+.table-card td a:hover{
+  text-decoration:none; transform:translateY(-1px);
+  border-color:var(--ring); box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+/* Hero: soft decorative glow */
+.hero--single{position:relative; overflow:hidden}
+.hero--single::after{
+  content:""; position:absolute; right:-90px; top:-90px;
+  width:300px; height:300px; border-radius:50%;
+  background:radial-gradient(circle, rgba(122,162,255,.18), transparent 70%);
+  pointer-events:none;
+}
+.hero--single .hero-text{position:relative; z-index:1}
+.hero .lead strong{color:var(--text)}
+
+/* Accessible focus states */
+a:focus-visible,.btn:focus-visible,.nav-link:focus-visible{
+  outline:2px solid var(--ring); outline-offset:2px; border-radius:10px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important}
+  .grid > .card:hover,.organizers > .card:hover,
+  .btn:hover,.nav-link:hover,.table-card td a:hover{transform:none}
 }
 
